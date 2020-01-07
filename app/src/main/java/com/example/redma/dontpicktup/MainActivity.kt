@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         toggle.setOnCheckedChangeListener{ _, isChecked ->
-            //トグルボタンOnの時の動作
+            //トグルボタンOnの時の動作⇒isChackedはトルクボタンの状態を判明
             if (isChecked){
                 val intent = Intent(this, AlarmService::class.java)
                 startService(intent)
