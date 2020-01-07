@@ -12,7 +12,7 @@ import android.os.IBinder
 
 class AlarmService : Service(),SensorEventListener {
     //スマホが持っていかれたと判断するための値
-    private val threshold: Float = 15f
+    private val threshold: Float = 10f
     private var mp: MediaPlayer? = null //  音声ファイルを再生するメディアプレイヤー
     private val oValue: Array<Float> = arrayOf(0f, 0f, 0f)  //Floatの配列
 
@@ -36,7 +36,6 @@ class AlarmService : Service(),SensorEventListener {
     }
 
     override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
     override fun onSensorChanged(event: SensorEvent?) {
